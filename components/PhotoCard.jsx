@@ -9,10 +9,8 @@ function PhotoCard({ photo, onPress }) {
         ? 'rgba(255, 255, 255, 0.1)'
         : 'rgba(0, 0, 0, 0.05)';
 
-    // Fallback voor afbeelding
     const imageUri = photo.uri || photo.photoUri || photo.image || null;
 
-    // Datum formatteren als die bestaat
     let formattedDate = '';
     if (photo.date) {
         const dateObj = new Date(photo.date);

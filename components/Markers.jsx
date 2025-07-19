@@ -3,6 +3,12 @@ import { Marker, Callout } from 'react-native-maps';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 export default function Markers({ photoMarkers = [], spotMarkers = [], onSpotPress, markerColors, localFavorites = {} }) {
+    const renderFavoriteText = (id) => {
+        const rating = localFavorites[id];
+        if (!rating || rating <= 0) return null;
+        return <Text>Favorite: {String(rating)}</Text>;
+    };
+
     return (
         <>
             {photoMarkers.map(photo => {
@@ -41,7 +47,7 @@ export default function Markers({ photoMarkers = [], spotMarkers = [], onSpotPre
                         <Callout>
                             <View style={styles.callout}>
                                 <Text style={styles.title}>{spot.title}</Text>
-                                {isRated && <Text>Favorite: {localFavorites[spot.id]}</Text>}
+                                {renderFavoriteText(spot.id)}
                             </View>
                         </Callout>
                     </Marker>

@@ -18,11 +18,13 @@ Hotspot is een mobiele app gemaakt met React Native en Expo waarmee gebruikers h
 ### Installatie
 ```bash
 npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs @react-navigation/native-stack @react-native-async-storage/async-storage uuid
+```
+```bash
 npx expo install expo-location expo-image-picker react-native-maps react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
 ```
 
 ## Werking
 - Download de Expo Go app
 - type ``npm run start``
-- scan de qr-code met de Expo Go app
+- scan de qr-code met je camera en open met de Expo Go app
 - Let op! Je telefoon moet verbonden zijn met hetzelfde netwerk als je computer.
